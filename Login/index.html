@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Login/assets/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+    <header class="header displayFlex alighCenter justifyCenter ">
+        <div class="headerContent displayFlex alighCenter justifyBetween">
+            <img style="width: 100px;" src="./assets/orkurt_logo.png">
+            <div class="info displayFlex justifyEvenly" style="width: 320px;">
+                <span>
+                    <a onclick="alert('Sobre o Orkut')" class="headerHref" href="#">Sobre o Orkut</a>
+                </span>
+                <span>
+                    <a onclick="alert('Centro de segurança')" class="headerHref" href="#">Centro de segurança</a>
+                </span>
+            </div>
+        </div>
+    </header>
+    <div class="container displayFlex alighCenter">
+        <div class="content displayFlex alighCenter justifyBetween">
+            <div id="mainImage" style="position: relative;">
+                <img style="width: 800px; border-radius: 20px; opacity: 60%;" src="./assets/pokemon_inicial_page.jpg">
+                <div class="displayFlex flexColumn"
+                    style="position: absolute; bottom: 50px;left: 30px; font-size: 1.8rem; color: #ffff; text-shadow: 2px 2px black;">
+                    <span><strong>Conecta-se aos seus amigos </strong></span>
+                    <span><strong>familiares usando recados e mensagens</strong></span>
+                    <span><strong>instantâneas</strong></span>
+                </div>
+            </div>
+            <div class="login displayFlex flexColumn alighCenter justifyEvenly">
+                <div class="displayFlex flexColumn alighCenter justifyBetween" style="height: 90px;">
+                    <img style="width: 35px;" src="./assets/O_orkut.png">
+                    <span style="font-size: 1.8rem;"><strong>Acesse o Orkut</strong></span>
+                </div>
+                <div class="displayFlex flexColumn alighCenter justifyBetween" style="width: 80%; height: 280px;">
+                    <span style="font-size: 0.8rem; align-self: flex-start;">Escolha seu Pokémon Inicial como
+                        perfil:</span>
+                    <form id="form" class="displayFlex flexColumn justifyBetween" style="width: 100%; height: 250px;">
+                        <button type="button" id="buttonCharmander" onclick="chooseCharmander()"
+                            onmouseover="overCharmander()" onmouseout="outCharmander()"
+                            class="chosePokemon displayFlex alighCenter justifyBetween">
+                            <div class="displayFlex alighCenter">
+                                <div style="margin-left: 20px; overflow: hidden;"
+                                    class="pokemonGif displayFlex justifyCenter">
+                                    <img id="charmanderImage" src="./assets/CharmanderImage.jpg">
+                                    <img id="charmanderGif" style="display: none; width: 100px;"
+                                        src="./assets/Charmander.gif">
+                                </div>
+                                <span style="margin-left: 20px;"><strong>Charmander</strong></span>
+                            </div>
+                            <div id="charmanderSelect" class="chosenOne"></div>
+                        </button>
+                        <button type="button" id="buttonBulbasaur" onclick="chooseBulbasaur()"
+                            onmouseover="overBulbasaur()" onmouseout="outBulbasaur()"
+                            class="chosePokemon displayFlex alighCenter justifyBetween">
+                            <div class="displayFlex alighCenter">
+                                <div style="margin-left: 20px; overflow: hidden;"
+                                    class="pokemonGif displayFlex justifyCenter">
+                                    <img id="bulbasaurImage" style="width: 60px;" src="./assets/BubassaurImage.png">
+                                    <img id="bulbasaurGif" style="display: none; width: 124px;"
+                                        src="./assets/bulbasaur.gif">
+                                </div>
+                                <span style="margin-left: 20px;"><strong>Bulbasaur</strong></span>
+                            </div>
+                            <div id="bulbasaurSelect" class="chosenOne"></div>
+                        </button>
+                        <button type="button" id="buttonSquirtle" onclick="chooseSquirtle()"
+                            onmouseover="overSquirtle()" onmouseout="outSquirtle()"
+                            class="chosePokemon displayFlex alighCenter justifyBetween">
+                            position: relative;
+                                <div class="displayFlex alighCenter">
+                                <div style="margin-left: 20px; overflow: hidden"
+                                    class="pokemonGif displayFlex justifyCenter">
+                                    <img id="squirtleImage" style="width: 60px;" src="./assets/SquirtleImage.png">
+                                    <img id="squirtleGif" style="display: none; width: 120px;"
+                                        src="./assets/Squirtle.gif">
+                                </div>
+                                <span style="margin-left: 20px;"><strong>Squirtle</strong></span>
+                            </div>
+                            <div id="squirtleSelect" class="chosenOne"></div>
+                        </button>
+                    </form>
+                </div>
+                <button class="confirmButton" ><a class="confirmButton" href="../Main_page/main.html"><strong>Confirmar</strong></a></button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer displayFlex alighCenter justifyCenter">
+        <span>
+            <p>Todos os direitos reservados</p>
+        </span>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>

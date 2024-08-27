@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+html,body{
+    height: 100%;
+}
+.displayFlex, body{
+    display: flex;
+}
+.flexColumn, body{
+    flex-direction: column;
+}
+.alighCenter, body{
+    align-items: center;
+}
+.justifyCenter{
+    justify-content: center;
+}
+.justifyBetween, body{
+    justify-content: space-between;
+}
+.justifyEvenly{
+    justify-content: space-evenly;
+}
+body{
+    background-color:#D9E6F7;
+}
+.header, .container, .footer, .content,.chosePokemon{
+    width: 100%;
+}
+.header, .footer, .login, .pokemonGif{
+    background-color: #ffff;
+}
+.login, .footer, .chosePokemon{
+    color: #ED2590;
+}
+.header{
+    height: 100px;
+}
+.headerContent{
+    width: 60vw;
+}
+.headerHref{
+    opacity: 80%;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #4B4B4B;
+}
+.headerHref:hover{
+    font-weight: bold;
+    transition: all;
+    transition: 200ms;
+}
+.container{
+    width: 1200px;
+    height: 100%;
+}
+.login{
+    width: 370px;
+    height: 490px;
+    border-radius: 20px;
+}
+.chosenOne{
+    display: none;
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+}
+.chosePokemon, .confirmButton{
+    border: 0;
+    border-radius: 10px;
+}
+.chosePokemon{
+    height: 80px;
+    background-color: white;
+}
+.chosePokemon:hover{
+    cursor: pointer;
+}
+.pokemonGif{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+.confirmButton{
+    text-decoration: none;
+    width: 50%;
+    height: 40px;
+    background-color: #ED2590;
+    color: #ffff;
+}
+.confirmButton:active{
+    font-size: 0.7rem;
+    transition: all;
+    transition-duration: 200ms ;
+}
+.confirmButton:hover{
+    cursor: pointer;
+}
+.footer{
+    font-size: 0.85rem;
+    height: 35px;
+}
+@media only screen and (max-width: 1203px) {
+    #mainImage{
+        display: none;
+    }
+    .content{
+        justify-content: center;
+    }
+    .login{
+        width: 700px;
+        transition: all;
+        transition-duration: 500ms ;
+    }
+  }
+  @media only screen and (max-width: 667px) {
+    .info{
+        display: none;
+    }
+    .headerContent{
+        justify-content: center;
+    }
+    .login{
+        width: 400px;
+        height: 600px;
+    }
+  }

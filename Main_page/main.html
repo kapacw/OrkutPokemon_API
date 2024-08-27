@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Login/assets/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <script defer src="./main.js"></script>
+</head>
+
+<body>
+    <header class="header displayFlex alighCenter justifyCenter ">
+        <div class="headerContent displayFlex alighCenter justifyBetween">
+            <img class="logo" src="../Login/assets/orkurt_logo.png">
+            <form class="form">
+                <input class="input" type="search" placeholder="Pesquisar no Orkut" required>
+            </form>
+            <div style="width: 120px;margin: 10px;" class="displayFlex alighCenter">
+                <img class="staticpPhoto" width="50px" alt="perfil" src="#">
+                <span class="profileName"
+                    style="font-size: 0.8rem; text-transform: capitalize; margin-left: 1px;"></span>
+            </div>
+        </div>
+    </header>
+    <div class="content displayFlex alighCenter justifyBetween">
+        <div class="caption statusInfo displayFlex flexColumn justifyCenter">
+            <p>* barra de status são contadas em pontos;</p>
+            <p>* o status representa o pokémon nível 1;</p>
+        </div>
+        <div class="profileDiv">
+            <div class="perfil displayFlex flexColumn alighCenter justifyEvenly">
+                <div class="displayFlex alighCenter justifyCenter"
+                    style="border: 2px solid #ED2590; border-radius: 50%; width: 210px;height: 210px;">
+                    <div class="animatedProfile displayFlex alighCenter justifyCenter">
+                        <img style="width: 300px;" src="../Login/assets/Fundo_Perfil_Animado.png">
+                        <img class="animatedPhoto" src="#" alt="pokemon">
+                    </div>
+                </div>
+                <span class="displayFlex alighCenter">
+                    <img style="width: 50px;margin-left: -9px;" src="../Login/assets/Pokeball.gif">
+                    <p class="pokeName" style="margin-left: -9px;"></p>
+                    <p class="pokeNumber" style="margin-left: 4px;"></p>
+                </span>
+            </div>
+        </div>
+        <div class="status displayFlex flexColumn alighCenter">
+            <div class="statusIntro displayFlex flexColumn justifyEvenly">
+                <div class="greetingsDiv displayFlex alighCenter">
+                    <span id="greetings" class="introSize" style="margin-left: 5px;"></span><span class="greetingsPokemon introSize"
+                        style="margin-left: 5px; text-transform: capitalize;"></span>
+                    <span id="pokemonType" class="pokemonType typeSize" style="margin-left: 20px;"></span>
+                </div>
+                <div style="text-transform: capitalize;" class="randomPhrase">
+                    <p id="randomMove"></p>
+                    <div class="triangle-up"></div>
+                </div>
+            </div>
+            <hr style="margin: 20px;  width: 90%; opacity: 30%;">
+            <div class="statusContent displayFlex flexColumn alighCenter justifyBetween">
+                <div class="statusBand displayFlex flexColumn alighCenter justifyBetween">
+                    <span class="statusInfo"><strong>Pontos de Acerto "<i>hp</i>"</strong></span>
+                    <div style="width: 100%;" class="displayFlex justifyCenter alighCenter">
+                        <span style="margin-right: 10px;" class="statusInfo"><strong>Status Base:</strong></span>
+                        <div class="statusBar displayFlex alighCenter">
+                            <div id="hpBar" class="barPercent displayFlex justifyCenter alighCenter">
+                                <p id="statHp" class="numberStat"></p>
+                            </div>
+                            <p id="percentHp" class="percentNumber"></p>
+                        </div>
+                    </div>
+                    <div style="width: 100%;" class="displayFlex justifyCenter alighCenter">
+                        <span style="margin-right: 35px;" class="statusInfo"><strong>Esforço:</strong></span>
+                        <div class="statusBar displayFlex alighCenter">
+                            <div id="hpEffort" class="barPercent hpEffort displayFlex justifyCenter alighCenter">
+                                <p id="statHpEffort" class="numberStat"></p>
+                            </div>
+                            <p id="percentHpEffort" class="percentNumber"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="statusBand displayFlex flexColumn alighCenter justifyBetween">
+                    <span class="statusInfo"><strong>Ataque</strong></span>
+                    <div style="width: 100%;" class="displayFlex justifyCenter alighCenter">
+                        <span style="margin-right: 10px;" class="statusInfo"><strong>Status Base:</strong></span>
+                        <div class="statusBar displayFlex alighCenter">
+                            <div id="attBar" class="barPercent displayFlex justifyCenter alighCenter">
+                                <p id="statAtt" class="numberStat"></p>
+                            </div>
+                            <p id="percentAtt" class="percentNumber"></p>
+                        </div>
+                    </div>
+                    <div style="width: 100%;" class="displayFlex justifyCenter alighCenter">
+                        <span style="margin-right: 35px;" class="statusInfo"><strong>Esforço:</strong></span>
+                        <div class="statusBar displayFlex alighCenter">
+                            <div id="attEffort" class="barPercent attEffort displayFlex justifyCenter alighCenter">
+                                <p id="statAttEffort" class="numberStat"></p>
+                            </div>
+                            <p id="percentAttEffort" class="percentNumber"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="statusBand displayFlex flexColumn alighCenter justifyBetween">
+                    <span class="statusInfo"><strong>Defesa</strong></span>
+                    <div style="width: 100%;" class="displayFlex justifyCenter alighCenter">
+                        <span style="margin-right: 10px;" class="statusInfo"><strong>Status Base:</strong></span>
+                        <div class="statusBar displayFlex alighCenter">
+                            <div id="defBar" class="barPercent displayFlex justifyCenter alighCenter">
+                                <p id="statDef" class="numberStat"></p>
+                            </div>
+                            <p id="percentDef" class="percentNumber"></p>
+                        </div>
+                    </div>
+                    <div style="width: 100%;" class="displayFlex justifyCenter alighCenter">
+                        <span style="margin-right: 35px;" class="statusInfo"><strong>Esforço:</strong></span>
+                        <div class="statusBar displayFlex alighCenter">
+                            <div id="defEffort" class="barPercent displayFlex justifyCenter alighCenter">
+                                <p id="statDefEffort" class="numberStat"></p>
+                            </div>
+                            <p id="percentDefEffort" class="percentNumber"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="statusBand displayFlex flexColumn alighCenter justifyBetween">
+                    <span class="statusInfo"><strong>Ataque Especial</strong></span>
+                    <div style="width: 100%;" class="displayFlex justifyCenter alighCenter">
+                        <span style="margin-right: 10px;" class="statusInfo"><strong>Status Base:</strong></span>
+                        <div class="statusBar displayFlex alighCenter">
+                            <div id="attEsBar" class="barPercent displayFlex justifyCenter alighCenter">
+                                <p id="statAttEs" class="numberStat"></p>
+                            </div>
+                            <p id="percentAttEs" class="percentNumber"></p>
+                        </div>
+                    </div>
+                    <div style="width: 100%;" class="displayFlex justifyCenter alighCenter">
+                        <span style="margin-right: 35px;" class="statusInfo"><strong>Esforço:</strong></span>
+                        <div class="statusBar displayFlex alighCenter">
+                            <div id="attEsEffort" class="barPercent displayFlex justifyCenter alighCenter">
+                                <p id="statAttEsEffort" class="numberStat"></p>
+                            </div>
+                            <p id="percentAttEsEffort" class="percentNumber"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="statusBand displayFlex flexColumn alighCenter justifyBetween">
+                    <span class="statusInfo"><strong>Defesa Especial</strong></span>
+                    <div style="width: 100%;" class="displayFlex justifyCenter alighCenter">
+                        <span style="margin-right: 10px;" class="statusInfo"><strong>Status Base:</strong></span>
+                        <div class="statusBar displayFlex alighCenter">
+                            <div id="defEsBar" class="barPercent displayFlex justifyCenter alighCenter">
+                                <p id="statDefEs" class="numberStat"></p>
+                            </div>
+                            <p id="percentDefEs" class="percentNumber"></p>
+                        </div>
+                    </div>
+                    <div style="width: 100%;" class="displayFlex justifyCenter alighCenter">
+                        <span style="margin-right: 35px;" class="statusInfo"><strong>Esforço:</strong></span>
+                        <div class="statusBar displayFlex alighCenter">
+                            <div id="defEsEffort" class="barPercent displayFlex justifyCenter alighCenter">
+                                <p id="statDefEsEffort" class="numberStat"></p>
+                            </div>
+                            <p id="percentDefEsEffort" class="percentNumber"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="statusBand displayFlex flexColumn alighCenter justifyBetween">
+                    <span class="statusInfo"><strong>Velocidade</strong></span>
+                    <div style="width: 100%;" class="displayFlex justifyCenter alighCenter">
+                        <span style="margin-right: 10px;" class="statusInfo"><strong>Status Base:</strong></span>
+                        <div class="statusBar displayFlex alighCenter">
+                            <div id="speedBar" class="barPercent displayFlex justifyCenter alighCenter">
+                                <p id="statSpeed" class="numberStat"></p>
+                            </div>
+                            <p id="percentSpeed" class="percentNumber"></p>
+                        </div>
+                    </div>
+                    <div style="width: 100%;" class="displayFlex justifyCenter alighCenter">
+                        <span style="margin-right: 35px;" class="statusInfo"><strong>Esforço:</strong></span>
+                        <div class="statusBar displayFlex alighCenter">
+                            <div id="speedEffort" class="barPercent displayFlex justifyCenter alighCenter">
+                                <p id="statSpeedEffort" class="numberStat"></p>
+                            </div>
+                            <p id="percentSpeedEffort" class="percentNumber"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="friendsDiv" class="friendsDiv">
+            <div id="friends" class="friends displayFlex flexColumn alighCenter justifyBetween">
+                <div class="headerFriends displayFlex alighCenter justifyBetween">
+                    <div>
+                        <span>Pokédex</span><span id="allPokemons" style="margin-left: 3px;">(1025)</span>
+                    </div>
+                    <button class="seeMoreButton seeMoreButton1"><strong>Ver todos</strong></button>
+                    <button class="seeMoreButton seeLessButton" style="display: none;"><strong>Ver menos</strong></button>
+                </div>
+                <div class="secctionFriend">
+                    <div id="pokemon-container" class="displayFlex alighCenter justifyCenter"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

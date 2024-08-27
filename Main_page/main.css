@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+html,body{
+    height: 100%;
+}
+.displayFlex, body{
+    display: flex;
+}
+.flexColumn, body{
+    flex-direction: column;
+}
+.alighCenter, body{
+    align-items: center;
+}
+.justifyCenter{
+    justify-content: center;
+}
+.justifyBetween{
+    justify-content: space-between;
+}
+.justifyEvenly{
+    justify-content: space-evenly;
+}
+body, .input, .randomPhrase, .statusBar{
+    background-color:#D9E6F7;
+}
+.header, .statusIntro, .statusContent, .friends, .footFriends ,.pokemonFriends{
+    width: 100%; 
+}
+.header, .perfil, .status, .friends{
+    background-color: #ffff;
+}
+.header{
+    height: 80px;
+}
+.headerContent{
+    width: 60vw;
+}
+.pokemonType, .numberStat, .percentNumber, .headerFriends{
+    font-weight: bold;
+}
+.logo{
+    width: 100px;
+    margin: 10px;
+}
+.input{
+    margin: 10px;
+    padding: 8px;
+    padding-left: 32px;
+    width: 320px;
+    opacity: 60%;
+    border: 0;
+    border-radius: 8px;
+    background-image: url('../Login/assets/icon_Lupa.png');
+    background-position: 10px 8px; 
+    background-repeat: no-repeat;
+}
+.content{
+    position: relative;
+    width: 1300px;
+    height: 850px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    transition: all;
+    transition: 500ms;
+}
+.perfil, .status, .friends{
+    border-radius: 20px;
+}
+.perfil{
+    width: 250px;
+    height: 300px;
+}
+.animatedProfile{
+    position: relative;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+.animatedPhoto{
+    position: absolute;
+    left: 50px;
+    top: 80px;
+    width: 100px;
+}
+.pokeNumber{
+    opacity: 60%;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+.pokeName{
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+.status{
+    width: 700px;
+    height: 800px;
+}
+.statusIntro{
+    height: 100px;
+}
+.pokemonType{
+    opacity: 30%;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+.greetingsDiv{
+    width: 600px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+.randomPhrase{
+    position: relative;
+    width: 94%;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding:10px;
+    opacity: 60%;
+    font-size: 0.8rem;
+}
+.triangle-up {
+    position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 12px solid #D9E6F7;
+    top: -8px;
+}
+.statusContent{
+    height: 80%;
+}
+.statusBand{
+    width: 100%;
+    height: 70px;
+}
+.statusInfo{
+    font-size: 0.8rem;
+    color: #D9E6F7;
+    font-style: italic;
+    margin-left: 5px;
+}
+.caption{
+    position: absolute;
+    color: black;
+    bottom: 20px;
+    left: 60px;
+    font-size: 0.6rem;
+}
+.statusBar{
+    height: 20px;
+    width: 80%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.barPercent{
+    height: 100%;
+    background-color: #ED2590;
+    transition: all;
+    transition: 500ms;
+}
+.numberStat{
+    font-size: 0.7rem;
+    color: #D9E6F7;
+}
+.percentNumber{
+    font-size: 0.6rem;
+    color: #ED2590;
+    margin-left: 2px;
+}
+.friendsDiv{
+    width: 300px;
+}
+.friends{
+    height: 442px;
+    overflow: hidden;
+    transition: all;
+    transition: 500ms;
+}
+.headerFriends{
+    width: 240px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 0.6rem;
+}
+.seeMoreButton{
+    font-size: 0.6rem;
+    background-color: #ffff;
+    color: #ED2590;
+    border: 0;
+}
+.seeMoreButton1:hover, .seeMoreButton2:hover, .seeLessButton:hover{
+    cursor: pointer;
+}
+.secctionFriend{
+    height: 100%;
+}
+
+#pokemon-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transition: all;
+    transition: 500ms;
+}
+.pokemon-item {
+    border: 1px solid #ddd;
+    font-size: 0.6rem;
+    border-radius: 8px;
+    padding: 5px;
+    width: 110px;
+    height: 110px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.profileDiv{
+    height: 800px;
+}
+
+@media only screen and (max-width: 1306px) {
+    html, body{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .headerContent{
+        width: 100%;
+    }
+    .content{
+        flex-direction: column;
+        height: 1800px;
+        transition: all;
+        transition: 500ms;
+    }
+    .perfil{
+        width: 800px;
+    }
+    .profileDiv{
+        height: 300px;
+    }
+    .status{
+        margin-top: 50px;
+        width: 800px;
+        padding-bottom: 10px;
+    }
+    .friendsDiv{
+        margin-top: 50px;
+        width: 800px;
+        height: 442px;
+    }
+    .headerFriends{
+        width: 80%;
+    }
+    .caption{
+        display: none;
+    }
+  }
+  @media only screen and (max-width: 830px) {
+    .logo{
+        width: 70px;
+    }
+    .content{
+        height: 1900px;
+    }
+    .perfil{
+        width: 370px;
+        height: 280px;
+    }
+    .profileDiv{
+        height: 280px;
+    }
+    .status{
+        order: 3;
+        width: 370px;
+    }
+    .statusBar{
+        width: 73%;
+    }
+    .friendsDiv{
+        order: 2;
+        width: 370px;
+    }
+    .introSize{
+        font-size: 1.1rem;
+    }
+    .typeSize{
+        font-size: 0.8rem;
+    }
+    .randomPhrase{
+        width: 90%;
+    }
+    .input{
+        width: 180px;
+    }
+  }
